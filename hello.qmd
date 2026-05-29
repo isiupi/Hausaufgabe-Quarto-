@@ -1,0 +1,87 @@
+---
+title: "Hello, Quarto"
+title-block-banner: true
+subtitle: "Hi ich heiße Isi"
+author: 
+  - "Max Mustermann"
+  - "Isabel Uphoff"
+date: 2026-05-22
+date-modified: last-modified
+format: html
+linkcolor: blue
+theme: flatly
+fontcolor: black
+mainfont: "Arial"
+editor: visual
+abstract: Hallo ich teste hier grade etwas 
+abstract-title: Zusammenfassung 
+doi: 10.3390/hearts6030023
+order: 1
+backgroundcolor: lightyellow
+toc: true
+toc-location: right
+number-sections: true
+code-copy: true
+---
+
+```{r}
+#| label: load-packages
+#| include: false
+
+library(tidyverse)
+library(palmerpenguins)
+```
+
+## Meet Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Meet the penguins
+
+![](https://raw.githubusercontent.com/quarto-dev/quarto-web/main/docs/get-started/hello/rstudio/lter_penguins.png){style="float:right;" fig-alt="Illustration of three species of Palmer Archipelago penguins: Chinstrap, Gentoo, and Adelie. Artwork by @allison_horst." width="401"}
+
+The `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io/palmerpenguins "palmerpenguins R package") package contains size measurements for `{r} nrow(penguins)` penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.
+
+The plot below shows the relationship between flipper and bill lengths of these penguins.
+
+```{r}
+#| label: plot-penguins
+#| warning: false
+#| echo: false
+
+ggplot(penguins, 
+       aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(
+    title = "Flipper and bill length",
+    subtitle = "Dimensions for penguins at Palmer Station LTER",
+    x = "Flipper length (mm)", y = "Bill length (mm)",
+    color = "Penguin species", shape = "Penguin species"
+  ) +
+  theme_minimal()
+```
+
+## Kleinere Überschrift
+
+### Noch kleiner
+
+jetzt normaler Text
+
+*kursiver Text*
+
+**fetter Text**
+
+***Fett kursiv***
+
+-   Apfel
+
+-   Banane
+
+-   Birne
+
+[eine Veröffentlichung](https://www.mdpi.com/2673-3846/6/3/23)
+
+```{r}
+plot(penguins_raw)
+```
