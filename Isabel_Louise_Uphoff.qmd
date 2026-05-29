@@ -27,17 +27,14 @@ code-copy: true
 ::: {.column width="60%"}
 Hi, mein Name ist Isabel Louise Uphoff. Ich bin 28 Jahre alt und studiere aktuell  Psychologie an der LMU, weil ich das immer schon machen wollte. Außerdem liebe ich Sport! Ich arbeite am TUM Klinikum Deutsches Herzzentrum. Außerdem wollte ich noch etwas mehr Text hier hinschreiben. 
 Noch mehr Text 
+Noch viel mehr Text. 
+halloo
 :::
 
 ::: {.column width="40%"}
 ![](IMG_2656.JPG){width="50%" fig-align="right"}
 :::
 
-Publikationen:
-
-1.  <https://www.mdpi.com/2673-3846/6/3/23>
-
-2.  <https://pubmed.ncbi.nlm.nih.gov/41745306/>
 
 ## Meine Analyse
 
