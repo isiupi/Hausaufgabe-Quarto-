@@ -1,0 +1,95 @@
+---
+title: "Isabel Louise Uphoff"
+title-block-banner: true
+subtitle: "Hi, schön, dass du da bist"
+author: 
+  - "Isabel Louise Uphoff"
+date: today
+format: html
+linkcolor: darkblue
+theme: flatly
+fontcolor: black
+mainfont: "Arial"
+editor: visual
+doi: 10.3390/hearts6030023
+order: 1
+backgroundcolor: white
+toc: true
+toc-location: right
+number-sections: true
+code-copy: true
+---
+
+## Who is Isi?
+
+::: {.columns}
+
+::: {.column width="60%"}
+Hi, mein Name ist Isabel Louise Uphoff. Ich bin 28 Jahre alt und promoviere aktuell am TUM Klinikum Deutsches Herzzentrum. Außerdem studiere ich Psychologie an der LMU, weil ich das immer schon machen wollte. Hi, mein Name ist Isabel Louise Uphoff. Ich bin 28 Jahre alt und promoviere aktuell am TUM Klinikum Deutsches Herzzentrum. Außerdem studiere ich Psychologie an der LMU, weil ich das immer schon machen wollte. Hi, mein Name ist Isabel Louise Uphoff. Ich bin 28 Jahre alt und promoviere aktuell am TUM Klinikum Deutsches Herzzentrum. Außerdem studiere ich Psychologie an der LMU, weil ich das immer schon machen wollte.
+:::
+
+::: {.column width="40%"}
+![](IMG_2656.JPG){width="50%" fig-align="right"}
+:::
+
+Publikationen:
+
+1.  <https://www.mdpi.com/2673-3846/6/3/23>
+
+2.  <https://pubmed.ncbi.nlm.nih.gov/41745306/>
+
+## Meine Analyse
+
+Ich habe diese Daten analysiert
+
+```{r}
+#| warning: false
+#| echo: false
+#| label: PLOT 
+library(readxl)
+Data <- read_excel("last.xlsx")
+
+plot(Data$FFM, Data$RMR, xlab="Fat Free Mass (kg)", ylab="Resting Metabolic Rate (kcal)", col = "darkred", pch = 16)
+
+```
+
+## Gleiche Analyse mit ggplot und Regressionslinie
+
+```{r}
+#| warning: false
+#| echo: false
+#| label: PLOT2 
+
+library(ggplot2)
+library(readxl)
+
+Data <- read_excel("last.xlsx")
+ggplot(Data) +
+  aes(
+    x = FFM,
+    y = RMR) +
+  geom_point () +
+  labs(
+    x = "Fat Free Mass (kg)",
+    y = "Resting Metabolic Rate (kcal)" 
+    ) +
+  geom_smooth(method = 'loess',linetype= "solid", color="blue", size = 0.5) 
+
+
+```
+
+jetzt normaler Text
+
+*kursiver Text*
+
+**fetter Text**
+
+***Fett kursiv***
+
+-   Apfel
+
+-   Banane
+
+-   Birne
+
+[meine erste Veröffentlichung](https://www.mdpi.com/2673-3846/6/3/23)
